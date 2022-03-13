@@ -1,0 +1,22 @@
+Datasets utilisés :
+Codes postaux - laposte_hesasmal.csv -  https://www.data.gouv.fr/fr/datasets/base-officielle-des-codes-postaux/ 
+Départements français - departement.csv - https://sql.sh/1879-base-donnees-departements-francais
+
+Ouvrez le fichier des codes postaux. 
+Combien de colonnes contient-il ? => 6 colonnes
+Comment ces colonnes sont-elles distribuées ? => le dataframe est distribué orienté colonne
+Quelle sont les types des colonnes du fichier ? => float, string, int
+
+
+Lisez le fichier des codes postaux avec Spark et affichez son contenu dans la console. 
+
+Questions :
+
+Quel est le schéma du fichier ?
+Affichez le nombre de communes.
+Affichez le nombre de communes qui possèdent l’attribut Ligne_5
+Ajoutez aux données une colonne contenant le numéro de département de la commune. 
+Ecrivez le résultat dans un nouveau fichier CSV nommé “commune_et_departement.csv”, ayant pour colonne Code_commune_INSEE, Nom_commune, Code_postal, departement, ordonné par code postal.
+Affichez les communes du département de l’Aisne.
+Quel est le département avec le plus de communes ?
+
