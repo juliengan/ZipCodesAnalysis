@@ -41,7 +41,7 @@ object DataFrame {
     // 4 ) Add department column
     val new_dff = df.withColumn("departement", (col("Code_commune_INSEE") / 1000).cast("integer"))
 
-    // 5 ) Save ordered dataframe by postal code as a csv
+    // 5 ) Save ordered dataframe by postal code as a csv put in comments to avoid duplicate errors at compilation
     // val ordered = new_df.orderBy("Code_postal")
     //ordered.write.format("csv").save("commune_et_departement.csv")
 
@@ -50,6 +50,10 @@ object DataFrame {
       aisne.foreach(x => println(x))
 
     // 7 ) Display department with the most municipalities
-    new_dff.groupBy(new_dff("Nom_commune")).agg(count("*").as("columnCount")).orderBy("columnCount").show(1)
+    val dep = new_dff
+      .groupBy( "departement")
+      .agg(count("Nom_commune").as("nb_communes"))
+    dep.sort(col("nb_communes").desc)
+    .show(1)
   }
 }
