@@ -1,4 +1,4 @@
-name := "Spark Dataframe 1"
+name := "SparkDataframe1"
 
 version := "1.0"
 
@@ -7,5 +7,4 @@ val sparkVersion = "3.2.1"
 
 libraryDependencies += "org.apache.spark" %% "spark-core" % sparkVersion
 libraryDependencies += "org.apache.spark" %% "spark-sql" % sparkVersion
-
 

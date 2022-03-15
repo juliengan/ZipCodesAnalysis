@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Spark DF 1" type="JarApplication">
+    <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/Spark_Dataframe_1_jar/Spark Dataframe 1.jar" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <module name="Spark Dataframe 1" />
+    <method v="2">
+      <option name="BuildArtifacts" enabled="true">
+        <artifact name="Spark Dataframe 1:jar" />
+      </option>
+    </method>
+  </configuration>
+</component>
