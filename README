@@ -1,22 +1,22 @@
-Datasets utilisés :
-Codes postaux - laposte_hesasmal.csv -  https://www.data.gouv.fr/fr/datasets/base-officielle-des-codes-postaux/ 
-Départements français - departement.csv - https://sql.sh/1879-base-donnees-departements-francais
+<h1>French zip codes and departments analysis with Spark</h1>
 
-Ouvrez le fichier des codes postaux. 
-Combien de colonnes contient-il ? => 6 colonnes
-Comment ces colonnes sont-elles distribuées ? => le dataframe est distribué orienté colonne
-Quelle sont les types des colonnes du fichier ? => float, string, int
+<h2>Datasets :</h2>
+- Zip Codes - laposte_hesasmal.csv -  https://www.data.gouv.fr/fr/datasets/base-officielle-des-codes-postaux/ 
+- French departments - departement.csv - https://sql.sh/1879-base-donnees-departements-francais
+
+<h2> Zip codes</h2>
+The obtained data frame is column-oriented distributed
+Contains 6 columns of float, string, and int types
+
+I extracted the following information :
+- File layout
+- The number of municipalities
+- The number of municipalities with the Ligne_5 attribute
+- The department which has the most communes
+- The municipalities in the Aisne department
+
+And added a column to the data containing the commune's department number. 
 
 
-Lisez le fichier des codes postaux avec Spark et affichez son contenu dans la console. 
-
-Questions :
-
-Quel est le schéma du fichier ?
-Affichez le nombre de communes.
-Affichez le nombre de communes qui possèdent l’attribut Ligne_5
-Ajoutez aux données une colonne contenant le numéro de département de la commune. 
-Ecrivez le résultat dans un nouveau fichier CSV nommé “commune_et_departement.csv”, ayant pour colonne Code_commune_INSEE, Nom_commune, Code_postal, departement, ordonné par code postal.
-Affichez les communes du département de l’Aisne.
-Quel est le département avec le plus de communes ?
+The result is available in the CSV file "commune_et_departement.csv", with columns Code_commune_INSEE, Nom_commune, Code_postal, and department, ordered by postal code.
 
